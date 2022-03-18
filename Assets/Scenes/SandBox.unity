@@ -409,6 +409,14 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: bef955e78a79ebe45a20684c61ec6cf5, type: 2}
+    - target: {fileID: 6456116636320525869, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.405
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456116636320525869, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.007
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
 --- !u!4 &532876244 stripped
@@ -1000,11 +1008,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 1836893215}
   range: 100
-  damage: 10
+  damage: 30
+  muzzleFlash: {fileID: 1091096613}
+  hitEffect: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
 --- !u!4 &1086713122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ff3366103894bec429eeaa9b86b595e6, type: 3}
   m_PrefabInstance: {fileID: 97027520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1091096613 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5029699906902952290, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+  m_PrefabInstance: {fileID: 506445465}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1116495050
 GameObject:
@@ -1501,6 +1516,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d29ba28bd5caaed429838de8bac7be72, type: 3}
   m_PrefabInstance: {fileID: 1927064991}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2031404033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 92802048421524585, guid: 0a45b8104449f444fb95867988231b76, type: 3}
+  m_PrefabInstance: {fileID: 92802048731193596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2031404041
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031404033}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 039b70e5e7ffbd1498948e3672270654, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &2093683873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 432898, guid: 75c27bf47f501a74fa5723911612c226, type: 3}
