@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] Camera FPCamera;
-    [SerializeField] float range = 100f;
+    [SerializeField] private Camera FPCamera;
+    [SerializeField] private float range = 100f;
+    [SerializeField] private float damage = 30f;
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -17,7 +18,20 @@ public class Weapon : MonoBehaviour
     private void Shoot()
     {   
         RaycastHit hit;
-        Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range);
-        Debug.Log("I hit this thing " + hit.transform.name);
+        if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
+        {
+            Debug.Log("I hit this thing " + hit.transform.name);
+            // TODO: Add some hit effect for visiual players
+            EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+            // Call a method on EnemyHealth that decreases the enemy's health
+            
+            target.TakeDamage(damage);
+        }
+        else
+        {
+            return;
+        }
+     
+        
     }
 }
