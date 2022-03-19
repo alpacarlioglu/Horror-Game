@@ -16,6 +16,7 @@ public class DeathHandler : MonoBehaviour
     {
         gameOverCanvas.enabled = true;
         Time.timeScale = 0;
+        FindObjectOfType<WeaponSwitcher>().enabled = false; // Turns off weapon switcher when player dead
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
