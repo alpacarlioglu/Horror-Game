@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252ebba8d597db640b0f54f80d4b63f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
   chaseRange: 10
   damage: 50
   turnSpeed: 5
@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 100
+  isDead: 0
 --- !u!114 &2031404049
 MonoBehaviour:
   m_ObjectHideFlags: 0
