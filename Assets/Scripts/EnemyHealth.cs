@@ -19,10 +19,7 @@ public class EnemyHealth : MonoBehaviour
         BroadcastMessage("OnDamageTaken");
         hitPoints -= damage;
         if (hitPoints <= 0)
-        {
             Die();
-            // Destroy(gameObject);
-        }
     }
 
     private void Die()
@@ -30,7 +27,5 @@ public class EnemyHealth : MonoBehaviour
         if (isDead) return;
         isDead = true;
         GetComponent<Animator>().SetTrigger("dead");
-        // GetComponent<EnemyAI>().enabled = false;
-        // Destroy(gameObject);
     }
 }

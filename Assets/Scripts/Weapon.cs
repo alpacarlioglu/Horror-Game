@@ -24,9 +24,7 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && canShoot == true)
-        {
             StartCoroutine(Shoot());
-        }
     }
 
     IEnumerator Shoot()
